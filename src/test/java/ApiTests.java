@@ -14,7 +14,7 @@ public class ApiTests {
 String URL = "https://reqres.in";
     @Test
     @DisplayName("Получение 1-го из пользователей")
-    public void getSingleUser(){
+    public void getSingleUserTest(){
         given()
                 .log().uri()
                 .baseUri(URL)
@@ -29,7 +29,7 @@ String URL = "https://reqres.in";
     }
     @Test
     @DisplayName("Создание нового пользователя")
-    public void postCreateNewUser(){
+    public void postCreateNewUserTest(){
     File jsonFile = new File("src/test/resources/example.json");
         given()
                 .log().uri()
@@ -50,7 +50,7 @@ String URL = "https://reqres.in";
     }
     @Test
     @DisplayName("Удаление пользователя")
-    public void deleteUser(){
+    public void deleteUserTest(){
         given()
                 .log().uri()
                 .baseUri(URL)
@@ -65,7 +65,7 @@ String URL = "https://reqres.in";
 
     @Test
     @DisplayName("Обновление данных пользователя")
-    public void updateUser(){
+    public void updateUserTest(){
         File jsonFile2 = new File("src/test/resources/example2.json");
         given()
                 .log().uri()
@@ -84,7 +84,7 @@ String URL = "https://reqres.in";
     }
     @Test
     @DisplayName("Поиск несуществующего пользователя")
-    public void getUnknownUser(){
+    public void getUnknownUserTest(){
         given()
                 .log().uri()
                 .baseUri(URL)
